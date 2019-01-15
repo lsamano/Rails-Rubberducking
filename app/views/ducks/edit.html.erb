@@ -5,10 +5,6 @@
   <%= f.label :description %>
   <%= f.text_area :description %>
   <%= f.label :student_id %>
-  <select name="duck[student_id]">
-    <% @students.each do |student| %>
-        <option value="<%= student.id %>"><%= student.name %></option>
-    <% end %>
-  </select>
+  <%= f.text_field :student_id %>
   <%= f.submit %>
 <% end %>
