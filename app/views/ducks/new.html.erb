@@ -5,6 +5,6 @@
   <%= f.label :description %>
   <%= f.text_area :description %>
   <%= f.label :student_id %>
-  <%= f.text_field :student_id %>
+  <%= f.collection_select :student_id, @students, :id, :name %>
   <%= f.submit %>
 <% end %>
