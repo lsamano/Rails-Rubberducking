@@ -1,0 +1,14 @@
+<h1>Edit Duck Profile</h1>
+<%= form_for @duck do |f| %>
+  <%= f.label :name %>
+  <%= f.text_field :name %>
+  <%= f.label :description %>
+  <%= f.text_area :description %>
+  <%= f.label :student_id %>
+  <select name="duck[student_id]">
+    <% @students.each do |student| %>
+        <option value="<%= student.id %>"><%= student.name %></option>
+    <% end %>
+  </select>
+  <%= f.submit %>
+<% end %>
